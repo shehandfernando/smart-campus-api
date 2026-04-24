@@ -21,7 +21,18 @@ public class RoomResource {
     }
 
     @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
     public Response createRoom(Room room) {
+        // 1. CHECK: Does this ID already exist in our HashMap?
+        if (rooms.containsKey(room.getId())) {
+            // 2. CONFLICT: If it exists, stop here and return 409
+            return Response.status(Response.Status.CONFLICT)
+                    .entity("{\"error\": \"Room ID " + room.getId() + " already exists.\"}")
+                    .build();
+        }
+
+        // 3. SUCCESS: If it's new, save it and return 201
         rooms.put(room.getId(), room);
         return Response.status(Response.Status.CREATED).entity(room).build();
     }
