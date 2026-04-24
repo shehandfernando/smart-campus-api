@@ -52,7 +52,7 @@ curl -X POST http://localhost:8080/api/v1/sensors/TEMP-001/readings \
 ## 4. Conceptual Report
 
 ## 📺 Demo Video
-[![Watch the video](![Screenshot (305).png](../../OneDrive/Pictures/Screenshots/Screenshot%20%28305%29.png))](https://drive.google.com/file/d/1sY32ldhDA-9eDDHHAQyECVJFKSQJCa8q/view?usp=sharing)
+[![Watch the video](screenshot.png)](https://drive.google.com/file/d/1sY32ldhDA9eDDHHAQyECVJFKSQJCa8q/view?usp=sharing)
 *Click the image above to watch the API demonstration.*
 
 ### Part 1: Service Architecture & Setup
